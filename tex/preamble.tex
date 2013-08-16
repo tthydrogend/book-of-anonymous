@@ -1,0 +1,32 @@
+\documentclass[a4paper,oneside]{book}
+\usepackage[utf8]{inputenc} % задати кодування для бейбела
+\usepackage[ukrainian]{babel}
+\usepackage{indentfirst} % робити відступ першому абзацу
+\usepackage[pdftex]{graphicx} % дозволити вставку зображень
+\usepackage{fancyhdr} % колонтитули
+\usepackage{titlesec} % представлення виводу назв рівнів секцій
+\usepackage{hyperref} % створити клікабельні посилання
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=3cm,bindingoffset=0cm]{geometry}
+\usepackage[labelsep=period]{caption} % Рис. НОМЕР{.} Опис. - додає оту крапочку
+\usepackage{tabularx}
+\usepackage{tocloft}
+\usepackage{multicol}
+
+\let \savenumberline \numberline
+\def \numberline#1{\savenumberline{#1.}}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % put dots for chapters
+% \setlength{\cftchapnumwidth}{0pt} % прибрати сраний відступ у другій лінійці
+% при переносі розділів
+
+\addto\captionsukrainian{\renewcommand{\contentsname}{ЗМІСТ}}
+\pagestyle{fancy} % стиль колонтитулів
+
+\setlength{\parindent}{1.0cm} % відступ абзаців
+\titlelabel{\thetitle. } % цифра. Назва
+\hypersetup{ % задати кольоризації в посиланнях
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black
+}
